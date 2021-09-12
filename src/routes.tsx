@@ -5,15 +5,15 @@ import { CategoryPage } from './pages/category-page';
 
 const routeConfig = [
     {
-        id: 'BEEF',
-        path: '/beef',
+        id: 'CATEGORY',
+        path: '/:category/:cut',
         exact: true,
         component: <CategoryPage />
     },
     {
         id: 'DEFAULT',
         path: '/*',
-        component: <Redirect to="/beef" />
+        component: <Redirect to="/beef/brisket" />
     }
 ]
 
