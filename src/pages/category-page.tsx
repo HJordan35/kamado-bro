@@ -4,12 +4,14 @@ import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import Container from "elements/Container";
 import { Banner } from "blocks/Banner";
+import TabNav from "blocks/Tab-Nav";
+import Button from "elements/Button";
 
 interface CategoryPageProps {
   category?: string;
 }
 
-const cuts = ["Brisket", "Ribs", "foo", "bar", "other"];
+const cuts = ["BRISKET", "RIBS", "STEAK", "TENDERLOIN", "PRIME RIB"];
 
 export const CategoryPage: React.FunctionComponent<CategoryPageProps> = (
   props
@@ -31,9 +33,9 @@ export const CategoryPage: React.FunctionComponent<CategoryPageProps> = (
       return cuts.map((cut: string) => {
         const cutRoute = cut.toLowerCase();
         return (
-          <li key={cut}>
-            <Link to={`/${category}/${cutRoute}`}>{cut}</Link>
-          </li>
+          <TabNav.Tab>
+            <Button>{cut}</Button>
+          </TabNav.Tab>
         );
       });
     }
@@ -46,7 +48,7 @@ export const CategoryPage: React.FunctionComponent<CategoryPageProps> = (
         <Banner.Title>Hello</Banner.Title>
       </Banner>
       <Container>
-        <ul>{renderCutOptions(cuts)}</ul>
+        <TabNav>{renderCutOptions(cuts)}</TabNav>
       </Container>
     </>
   );
