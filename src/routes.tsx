@@ -6,7 +6,7 @@ import { CategoryPage } from './pages/category-page';
 const routeConfig = [
     {
         id: 'CATEGORY',
-        path: '/:category/:cut',
+        path: '/:category/:subCategory',
         exact: true,
         component: <CategoryPage />
     },
