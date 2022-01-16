@@ -6,6 +6,8 @@ import Container from "elements/Container";
 import { Banner } from "blocks/Banner";
 import TabNav from "blocks/Tab-Nav";
 import Button from "elements/Button";
+import CookItem from "blocks/Cook-Item";
+import CookItemList from "blocks/Cook-Item-List";
 
 interface CategoryPageProps {
   category?: string;
@@ -50,6 +52,8 @@ export const CategoryPage: React.FunctionComponent<CategoryPageProps> = (
       <Container>
         <TabNav>{renderCutOptions(cuts)}</TabNav>
       </Container>
+
+      <CookItemList />
     </>
   );
 };

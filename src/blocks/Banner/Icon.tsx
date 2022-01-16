@@ -1,4 +1,4 @@
-import { palette } from "constants/index";
+import { Palette } from "constants/index";
 import React from "react";
 import styled from "styled-components/macro";
 import { Aperture } from "react-feather";
@@ -24,7 +24,7 @@ const IconWrapper = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
-  color: ${palette.secondary};
+  color: ${Palette.secondary};
 
   div {
     position: relative;
@@ -33,7 +33,7 @@ const IconWrapper = styled.div`
 
     &:before {
       position: absolute;
-      background-color: ${palette.secondary};
+      background-color: ${Palette.secondary};
       content: "";
       width: 56px;
       height: 2px;
@@ -42,7 +42,7 @@ const IconWrapper = styled.div`
     }
     &:after {
       position: absolute;
-      background-color: ${palette.secondary};
+      background-color: ${Palette.secondary};
       content: "";
       width: 56px;
       height: 2px;

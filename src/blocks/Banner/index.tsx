@@ -1,4 +1,4 @@
-import { palette } from "constants/index";
+import { Palette } from "constants/index";
 import React from "react";
 import styled from "styled-components/macro";
 import Icon from "./Icon";
@@ -17,7 +17,7 @@ export const Banner: BannerInterface = (props: Props) => {
 const BannerWrapper = styled.div`
   width: 100%;
   padding: 24px;
-  background-color: ${palette.background};
+  background-color: ${Palette.background};
   text-align: center;
 `;
 

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components/macro";
 
 export const GlobalStyle = createGlobalStyle`
+
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -82,7 +83,7 @@ th {
 
 @font-face {
 	font-family: 'Knewave';
-	src: url('/Knewave-Regular.ttf');
+	src: url(../assets/Knewave-Regular.ttf) format('truetype');
 }
 
 @font-face {
