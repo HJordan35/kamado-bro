@@ -4,6 +4,7 @@ import { breakpoints } from "constants/index";
 import Text from "elements/Paragraph";
 import Container from "elements/Container";
 import CookItem from "blocks/Cook-Item";
+import { shadowed } from "styles/mixins";
 
 interface Props {
   children?: React.ReactNode;
@@ -40,8 +41,10 @@ const ListSectionTitle = styled.div`
   height: 48px;
   display: flex;
   align-items: center;
+  margin: 0 16px;
 
   p {
+    font-weight: bold;
     color: var(--tertiary-color);
   }
 
@@ -50,10 +53,12 @@ const ListSectionTitle = styled.div`
     height: 48px;
     width: 100%;
     position: absolute;
+    border-radius: 4px;
     top: 0;
     left: calc(-100% + 206px);
     background-color: var(--secondary-color);
     z-index: -1;
+    ${shadowed}
   }
 `;
 

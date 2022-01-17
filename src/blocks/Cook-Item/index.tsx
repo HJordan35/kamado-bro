@@ -14,7 +14,9 @@ export const CookItem: React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <CookItemWrapper>
-      <CookImage src="/assets/temp-brisket.png" />
+      <CookImageWrapper>
+        <CookImage src="/assets/temp-brisket.png" />
+      </CookImageWrapper>
       <CookItemContent>
         <CookItemContentBox>
           <CookItemRating>
@@ -107,11 +109,20 @@ const CookItemWrapper = styled.div`
   flex: 1;
 `;
 
-const CookImage = styled.img`
+const CookImageWrapper = styled.div`
   width: 100%;
   position: absolute;
+  background-color: transparent;
   z-index: 1;
-  ${shadowed}
+  border-radius: 8px;
+  overflow: hidden;
+`;
+
+const CookImage = styled.img`
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  ${shadowed};
 `;
 
 const CookItemContent = styled.div`
@@ -129,6 +140,7 @@ const CookItemContentBox = styled.div`
   background-color: var(--pure-white);
   width: 100%;
   padding: 18px;
+  border-radius: 4px;
   ${shadowed}
 `;
 

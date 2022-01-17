@@ -8,6 +8,7 @@ import TabNav from "blocks/Tab-Nav";
 import Button from "elements/Button";
 import CookItem from "blocks/Cook-Item";
 import CookItemList from "blocks/Cook-Item-List";
+import FloatingAction from "blocks/Floating-Action";
 
 interface CategoryPageProps {
   category?: string;
@@ -52,8 +53,8 @@ export const CategoryPage: React.FunctionComponent<CategoryPageProps> = (
       <Container>
         <TabNav>{renderCutOptions(cuts)}</TabNav>
       </Container>
-
       <CookItemList />
+      <FloatingAction />
     </>
   );
 };
